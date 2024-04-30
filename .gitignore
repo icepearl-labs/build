@@ -1,0 +1,6 @@
+.sources
+.toolchain
+.chroot
+.freebsd
+.build-log
+docker/icepearl-*.sfs

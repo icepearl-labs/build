@@ -1,0 +1,20 @@
+---
+Patch: Binutils modifications for Icepearl
+
+Linking dynamic library in binutils, add "*-*-k*bsd*-musl*" support
+for Icepearl. kFreeBSD Musl is add 
+---
+
+Target: config/target-posix
+===================================================================
+diff --git a/config/target-posix b/config/target-posix
+index 49d00f4..2df647a 100644
+--- a/config/target-posix
++++ b/config/target-posix
+@@ -1,5 +1,5 @@
+ case "${target}" in
+-  *-*-linux* | *-*-gnu* | *-*-k*bsd*-gnu | *-*-kopensolaris*-gnu)
++  *-*-linux* | *-*-gnu* | *-*-k*bsd*-gnu | *-*-k*bsd*-musl* | *-*-kopensolaris*-gnu)
+       ;;
+   *-*-netbsd* | *-*-freebsd* | *-*-openbsd* | *-*-dragonfly*)
+       ;;
